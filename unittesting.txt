@@ -1,0 +1,10 @@
+Xiaoyong Zheng
+CS362 /Assignment2
+
+3. In my cardtest and unittest, I just find one bug form cardtest2, the bug is that when the  players play card Village, they cant get 2 actions. just get one action. there is not bug from other test.
+
+4. when I use gcov to test my cardtest and unittest, I find it is hard to 100% coverge, it's aways 70% to 80%, I dont know why, maybe we just neet to know the test correct or incorrect.
+
+5 Please type "make all_tests, the unittestresult.out will be created
+
+6. I found unit testing is a good way to test some small parts of a programming, it is easy and high-efficiency.  Before this class, I always test whole program, and I always know there is bug in my program, but I dont konw where it is, unit test is different. it is not effacted other function when you test one function.  And east to find where bug is. I love unit test now.
