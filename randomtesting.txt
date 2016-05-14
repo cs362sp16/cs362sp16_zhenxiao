@@ -1,0 +1,11 @@
+Xiaoyong Zheng
+CS 362 Assignment3
+
+compile command: make all_randomtest
+outputcommand: make out_randtest1, out_randtest2, out_randtest3
+
+I chose card Adventurer, Great_hall and Village to complete random testing. for each card, I created some variables and randomly create the value of these variables. then I initialize the game. use loop and pass these randomly created variables into game. And then, I played the card which I want to test, printf or compare the result. All these three cards have similar variables. thus I use similar way to generate random varibles and pass them into game. for example, I randomly create number of player, deck hand count etc... finally, I check the result. for Advanturer, I check the number of coins and play turn. for village, I check the actions. for Great_hall, I check the actions and number of card in player hand.
+
+for testing result, the Adventurer and Village have errors, The Great_hall test has no error. For the Village errors, it is expected because I changed this function in assignment 1. but I cant find the problem of Adventurer. 
+
+I used -b -c tages to gcov to output result. it is clear to show the coverage of the lines and branches. I found the branches coverage is 100% for each card test. but only randomtestcard2 can achive lines executed coverage 100%. There are some statement the test did not run. For the time, I set 1000 times for making loop. It is cost me about 10 seconds. To compare my unit tests coverage, I found random tests obvious have higher coverage than unit tests. The reason I think that in unit test, we usually set a fixed value and pass it in function to test, it cannot check all conditions. but random test is different, many values are randomly created and use loop to test many times. it can check all branches. Thus, random testing has better fault detection. 
