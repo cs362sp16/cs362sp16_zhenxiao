@@ -1,0 +1,6 @@
+Xiaoyong Zheng
+
+
+At first, I run my dominion.c to test, I did test more than 20 times, for each one, the coverage is more than 80%, I think my testdominion is successful. when I changed the seed number, I got few of "Test Failed", I think that is my testdominion problem. because when I run my testdominion, sometime, it run into a infinite loop , I can not find the problem,  maybe there are too many random values. but most of test is successful.
+
+when I compared my dominion and my classmate, there are many different. for example, the scores, the players and the coverage. Both of us have high coverage, my coverage more than 80% and my classmate corvage more than 78%. But I can not judge which one is incorrect, because this test is random test, there are many random values result in different result. 
