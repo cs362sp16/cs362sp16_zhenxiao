@@ -1,3 +1,0 @@
-I refactored card Council_room, card Village, card Steward, card Sea_hag and card Cutpurse. 
-In Cutpurse function, I changed update 2 coins to 3 coins
-In village function, it should be +2 actions, I changed to 1 action

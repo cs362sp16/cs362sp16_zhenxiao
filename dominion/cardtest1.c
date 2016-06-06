@@ -23,7 +23,7 @@ int myassert(int b, char* msg){
 
 void checkasserts() {
    if (failed!=0) {
-     printf ("TEST SUCCESSFULLY COMPLETED.\n");
+     printf ("TEST  COMPLETED.\n");
    }
    else{
 	   printf("TEST FAILD. \n");

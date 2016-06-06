@@ -1,0 +1,43 @@
+For the debugging, I start with my own testing, I used the card tests and unit tests from my assignment 2. 
+
+The bug that I found it in the card village, because when I run my card test, it cannot be passed and showed to me actions incorrect. Thus I looked up the village card function and check the bug. 
+
+Debugger: GDB
+cardtest2
+Error: FILED ASSERTION: action incorrect
+         before test, the action is 1, after test, the action is 2
+After test, the action number should be 3.
+
+
+I set break point in line 47 playCard(0, 0, 0, 0, &g)
+In the function  fvillage:
+int fvillage(struct gameState *state, int handPos){
+
+		int currentPlayer = whoseTurn(state);
+
+		drawCard(currentPlayer, state);
+
+			
+      //+2 Actions
+
+      state->numActions = state->numActions + 1;
+
+			
+      //discard played card from hand
+
+      discardCard(handPos, currentPlayer, state, 0);
+
+      return 0;
+
+}
+in the function, the line 5, it shoud add 2 actions, but just add 1 action. So I changed state->numActions = state->numActions + 1 to state->numActions = state->numActions + 2. Then I run my card test again, all tests can pass.
+
+I think my process is appiled  the Agans' principles:
+1. understand the system.
+	Before I did all test, I have read the rules of this game and download this for Internet. I have played more than 10 times. I understand the function of each card. It is very halpful for my debug. 
+2, make it fail. 
+	In assignment 2, I changed some values in my refactor functions, it is make fail seccussful, and I changed these value back, test again, test seccussful. and then changed these values again. 
+3. Quit thinking and look. 
+	when my tests failed, I looked the results and think where the error is, which value is incorrect and then look up the function, check the value and find the bug. I did not just guess.
+9. If you didnot fix it, it ain't fixed. 
+	After I changed some values, I always run test again, make sure the test can pass.

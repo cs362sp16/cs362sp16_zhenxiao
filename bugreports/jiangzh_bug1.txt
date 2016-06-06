@@ -1,0 +1,17 @@
+when I used card test, I found in jiangzh's dominion.c , there is a bug in his Village card, my Village card test canot pass his function. Get wrong actions.
+
+int village_function(struct gameState *state, int currentPlayer, int handPos){
+    drawCard(currentPlayer, state);
+
+   
+ state->numActions = state->numActions + 3;
+
+   
+ discardCard(handPos, currentPlayer, state, 0);
+
+   
+ return 0;
+
+}
+
+in line 3, state->numActions shoud plus 2.

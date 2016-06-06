@@ -1,0 +1,50 @@
+when I running my card test, I found there is a bug in his Council_room card, my Council_room card test has failed assertion: draw card incorrect. 
+
+int function_renamed_council_room(struct gameState *state,int currentPlayer,int handPos){
+
+	  	//changed to function
+     
+ 		//+4 Cards
+
+		 // add bugs
+
+	  int i;
+
+	  
+for (i = 0; i < 3; i++)
+	{
+
+	  drawCard(currentPlayer, state);
+
+	}
+
+			
+      //+1 Buy
+
+      	state->numBuys++;
+	
+		
+      //Each other player draws a card
+ 
+     	for (i = 0; i < state->numPlayers; i++)
+	{
+
+	  if ( i != currentPlayer )
+	    {
+
+	      drawCard(i, state);
+
+	    }
+
+	}
+
+			
+      //put played card in played card pile
+
+      discardCard(handPos, currentPlayer, state, 0);
+
+	return 0;
+
+	  
+  }
+In line 7, for(i = 0; i<3; i++) shoud be for(i=0; i<4; i++) because it should add 4 cards.

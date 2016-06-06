@@ -1,0 +1,41 @@
+When I used my randomadvanture test, I found there is bug in his advanture card function. I cannot pass my test.  Get wrong coins.
+
+int adventurer_function(struct gameState *state, int currentPlayer){
+   
+  int drawntreasure = 0;
+  
+  int cardDrawn;
+ 
+  int z = 1;
+  
+  int temphand[MAX_HAND];
+
+  
+  while(drawntreasure < 2){
+    
+    if(state->deckCount[currentPlayer] < 1)
+      
+      shuffle(currentPlayer, state);
+
+  
+      drawCard(currentPlayer, state);
+    
+      cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];
+
+  
+   if(cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
+             	      drawntreasure++;
+    
+    else{
+        
+        temphand[z]=cardDrawn;
+     
+        state->handCount[currentPlayer]--;
+       
+        z++;
+       
+       }
+  
+  }
+
+the initialize z should equal 0;

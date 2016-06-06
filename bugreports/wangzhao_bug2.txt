@@ -1,0 +1,31 @@
+when I running my card test, I found there is a bug in his smithy card, my smithy card test has failed assertion: draw card incorrect. 
+
+int function_renamed_smithy(struct gameState *state,int currentPlayer, int handPos){
+
+	  
+ // change this cards to function
+
+      	  //+3 Cards
+
+	  // add bugs
+
+	  int i;
+
+	  
+      for (i = 0; i < 2; i++)
+	{
+
+	  drawCard(currentPlayer, state);
+
+	}
+
+			
+      //discard card from hand
+ 
+     	discardCard(handPos, currentPlayer, state, 0);
+
+	 return 0;
+
+ }
+
+in function function_renamed_smithy, line 5, for(i = 0; i<2; i++) should be for(i = 0; i<3; i++), because it should add 3 cards.
