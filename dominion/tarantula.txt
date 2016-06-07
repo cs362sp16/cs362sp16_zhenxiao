@@ -1,15 +1,5 @@
-The file tarantula.py is my implementation of tarantula for dominion.c. This
-program runs a test suite consisting of each of my unit tests. For each unit
-test, the program runs the unit test and gcov on dominion.c and records
-information used to compute the suspiciousness of each coverage unit. For this
-program, a coverage unit is defined to be a line in the source file. When the
-program finishes running the test suite, the suspiciousness of each line is
-computed and the line is printed to the terminal window in an appropriate color.
-Lines that are not executed are printed in the default color. Lines with a
-suspiciousness of 0, i.e., lines that are only executed by passing tests, are
-printed in green. Lines with a non-zero suspiciousness no greater than 0.5 are
-printed in yellow. Lines with a suspiciousness greater than 0.5 are printed in
-red.
+I chose tarantula way to test. The file tarantula.py is my implementation of tarantula for dominion.c. This program runs a test suite consisting of each of my unit tests. For each unittest, the program runs the unit test and gcov on dominion.c and records information used to compute the suspiciousness of each coverage unit. For this program, a coverage unit is defined to be a line in the source file. When the
+program finished the test suite, the suspiciousness of each line is computed and the line is printed to a terminal window in an appropriate color. Lines that are not executed are printed in the default color. Lines with a suspiciousness of 0, i.e., lines that are only executed by passing tests, are printed in green. Lines with a non-zero suspiciousness no greater than 0.5 are printed in yellow. Lines with a suspiciousness greater than 0.5 are printed in red.
 
 After using gcov and gdb to localize the bug described in debugging.txt, I decided to use tarantula for the same purpose. I was surprised by how much more intuitive
 it was to use tarantula than gcov. Since the lines that are printed as red or
